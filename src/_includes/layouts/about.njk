@@ -1,0 +1,20 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/components/card.macro.njk" import card %}
+
+{% block content %}
+{{ content | safe }}
+{% if collections['projects_' + lang].length > 0 %}
+    <section>
+      <div class="wrapper flow">
+        <h2>{% __ 'projects' %}</h2>
+        <div class="cards">
+          {% set cardType = "project" %}
+          {% for item in collections['projects_' + lang] %}
+            {{ card({image: item.data.image, title: item.data.title, body: item.data.desc, color: item.data.projectColor, url: item.data.permalink }) }}
+          {% endfor %}
+        </div>
+        </div>
+      </div>
+    </section>
+{% endif %}
+{% endblock %}

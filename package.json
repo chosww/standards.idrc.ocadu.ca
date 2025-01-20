@@ -14,7 +14,6 @@
     "lint:scripts": "biome check .",
     "lint:markdown": "markdownlint-cli2 \"**/*.md\"",
     "start": "npm-run-all -l clean dev",
-    "test": "c8 --all --src src -r clover -r text ava",
     "prepare": "husky"
   },
   "repository": {
@@ -29,21 +28,25 @@
   },
   "homepage": "https://github.com/inclusive-design/standards.idrc.ocadu.ca#readme",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0-beta.1",
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "eleventy-plugin-broken-links": "^2.2.1",
+    "eleventy-plugin-fluid": "^3.0.0",
     "eleventy-plugin-footnotes": "^0.11.0",
-    "rimraf": "^6.0"
+    "infusion": "^4.8.0",
+    "rimraf": "^6.0",
+    "rosetta": "^1.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "ava": "^6.0",
     "biome-config-fluid": "github:greatislander/biome-config-fluid",
-    "c8": "^10.0",
     "cross-env": "^7.0.3",
     "debug": "^4.3.5",
     "husky": "^9.0.11",
+    "linkedom": "^0.18.6",
     "lint-staged": "^15.2.7",
-    "markdownlint-cli2": "^0.14.0",
+    "markdownlint-cli2": "^0.17.0",
     "markdownlint-config-fluid": "^0.1.5",
     "npm-run-all2": "^7.0.0"
   },

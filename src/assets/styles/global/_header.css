@@ -1,0 +1,54 @@
+header {
+    background-color: var(--fl-bgColor, var(--color-indigo-800));
+    color: var(--fl-fgColor, var(--color-white));
+    box-shadow: inset 0 -0.2rem 0 0 var(--fl-fgColor, transparent);
+}
+
+.header {
+    font-family: var(--family-sans-serif);
+    padding-inline: var(--common-inline-padding);
+}
+
+.header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 3.56rem;
+    max-width: 75rem;
+    margin-inline: auto;
+}
+
+.header__settings {
+    margin-inline-start: auto;
+}
+
+.header__language {
+    display: flex;
+    align-items: center;
+}
+
+[aria-current="page"] {
+    text-decoration: none;
+}
+
+.header__language li:not(:last-child)::after {
+    margin-inline: 0.5rem;
+    content: "/";
+}
+
+.fl-prefsEditor-separatedPanel {
+    background: inherit;
+    border-block-end: none !important;
+    display: block;
+    min-height: 2.0625rem;
+}
+
+.fl-prefsEditor-separatedPanel .fl-panelBar.fl-panelBar-wideScreen {
+    background: inherit !important;
+    min-height: 2.0625rem;
+    padding-inline: var(--common-inline-padding) !important;
+}
+
+.fl-prefsEditor-separatedPanel .fl-panelBar .fl-prefsEditor-buttons {
+    margin-inline-end: 0 !important;
+}
